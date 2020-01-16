@@ -17,9 +17,7 @@ export class EmployeeService {
  getAllValues(): Observable<Employee[]> {  
     return this.http.get<Employee[]>(this.url + '/AllValues');  
   } 
-  getEmployeeById(employeeId: bigint): Observable<Employee> {  
-    return this.http.get<Employee>(this.url + '/GetEmployeeDetailsById/' + employeeId);  
-  }  
+ 
   InsertValue(employee: Employee): Observable<Employee> { 
     console.log(employee); 
     const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'}) };  
