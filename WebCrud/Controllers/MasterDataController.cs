@@ -39,29 +39,6 @@ namespace WebCrud.Controllers
                 throw;
             }
         }
-        [Authorize]
-        [HttpGet]
-        [Route("Api/Employee/GetEmployeeDetailsById/{employeeId}")]
-        public IHttpActionResult GetValueById(int Id)
-        {
-            MasterValue objEmp = new MasterValue();
-
-            try
-            {
-                objEmp = objEntity.MasterValues.Find(Id);
-                if (objEmp == null)
-                {
-                    return NotFound();
-                }
-
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-
-            return Ok(objEmp);
-        }
         
         [HttpPost]
         [Route("Api/Employee/InsertValues")]
