@@ -1,0 +1,55 @@
+
+
+.create{
+position: relative;
+left:20%;
+margin-top:7%;
+   width: 25%;
+  height: 50%;
+  background-color:rgba(249, 254, 255, 0.5);
+  box-shadow: 10px 10px 10px 10px #888888;
+}
+.f1,.f2{
+  position: relative;
+  left:20%;
+}
+.f1{
+  position: relative;
+  margin-top:4%;
+}
+.f2{
+  position: relative;
+  margin-top:-10%;
+}
+.title{
+  position: relative;
+left:20%;
+}
+.submit{
+  position: relative;
+  margin-top: 5%;
+  left:40%;
+}
+.save{
+  position: relative;
+  left:50%;
+  margin-top: 5%;
+}
+.table{
+  position: relative;
+  left: 70%;
+  margin-top:-25%;
+}
+.values{
+  position: relative;
+  width: 12.5%;
+  height: 200%;
+  left:70%;
+margin-top:-29%;
+background-color:rgba(249, 254, 255, 0.5);
+
+
+}
+
+
+

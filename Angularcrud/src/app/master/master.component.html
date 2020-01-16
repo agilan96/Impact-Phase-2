@@ -1,0 +1,106 @@
+<app-navbar></app-navbar>
+<div class="listtable" [hidden]="!isValid">
+
+ 
+<mat-form-field appearance="outline">
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter" autocomplete="off">
+  </mat-form-field>
+ 
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+  
+    
+      <ng-container matColumnDef="MasterName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Master List</th>
+        <td mat-cell *matCellDef="let row">{{row.MasterName}}</td>
+      </ng-container>
+  
+   
+      <ng-container matColumnDef="Action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+        <td mat-cell *matCellDef="let element" class="action">
+            <button mat-raised-button color="warn"[disabled]="element.Deleted==0"(click)="getMaster(element.MasterName)">VIEW</button>      
+        </td>
+      </ng-container>
+   
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+      </tr>
+  
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+</div>
+  
+
+  <div class="mastertable" [hidden]="isValid">
+    <mat-form-field appearance="outline">
+        <input matInput (keyup)="applyFilter2($event.target.value)" placeholder="Filter" autocomplete="off">
+      </mat-form-field>
+     <div class="mat-elevation-z8">
+<table mat-table [dataSource]="dataSource2" matSort>
+
+    
+
+    <ng-container matColumnDef="Value">
+      <th mat-header-cell *matHeaderCellDef>{{List}}</th>
+      <td mat-cell *matCellDef="let element"> {{element.Value}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="buttons">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let element" class="action">
+    <mat-checkbox [checked]="element.Deleted==0" (change)="onChange(element)"></mat-checkbox>
+  </td>
+      </ng-container>
+   
+    <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+    
+  </table>
+ 
+</div>  
+
+    <button mat-raised color [style.background-color]="green" class="back" mat-button (click)="back()" mat-flat-button color="primary">Back</button>
+  
+   
+    <div class="lol"> 
+     <mat-card-title class="title">ADD VALUE</mat-card-title>
+        <form class="form1" [formGroup]="employeeForm"(ngSubmit)="onFormSubmit(employeeForm.value)">  
+         
+              <table>  
+                  <tr>  
+             
+                    <br><br>                                     
+                    <td class="field2"> 
+                      
+                      <mat-form-field appearance="outline" class="f2">  
+                        <input class="Value" formControlName="Value" matTooltip="Enter Value" matInput placeholder="Value" autocomplete="off">  
+                      </mat-form-field>  
+                 
+                      <mat-error>  
+                        <span *ngIf="!employeeForm.get('Value').value && employeeForm.get('Value').touched"></span>  
+                      </mat-error>  
+                    </td>  
+                  </tr>                                    
+                    <td></td>  
+                   
+                    <td class="content-center">  
+                      <button class="submit" type="submit" mat-raised-button color="primary"matTooltip="Click Submit Button"[disabled]="!employeeForm.valid">Submit</button>      
+                      
+                     
+                    </td>  
+                    <td>  
+                    </td>                     
+                </table>  
+             
+              </form>
+            
+            
+     
+      </div>
+ 
+
+ 
+
+ 

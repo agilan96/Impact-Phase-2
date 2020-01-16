@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MasterDataModelStoreContainer" CdmEntityContainer="MasterDataEntities">
+    <EntitySetMapping Name="MasterLists">
+      <EntityTypeMapping TypeName="MasterDataModel.MasterList">
+        <MappingFragment StoreEntitySet="MasterLists">
+          <ScalarProperty Name="JsonObject" ColumnName="JsonObject" />
+          <ScalarProperty Name="MasterName" ColumnName="MasterName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MasterValues">
+      <EntityTypeMapping TypeName="MasterDataModel.MasterValue">
+        <MappingFragment StoreEntitySet="MasterValues">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="MasterName" ColumnName="MasterName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+
+   <mat-card class="create">
+    <mat-card-title class="title">    
+        CREATE MASTER
+  </mat-card-title>    
+    <mat-card-content> 
+        
+        <form class="form1" [formGroup]="employeeForm"(ngSubmit)="onFormSubmit(employeeForm.value)">  
+                  
+                      <mat-form-field class="f1" appearance="outline">  
+                        <input class="mastername" [(ngModel)]="MasterName" formControlName="MasterName" matTooltip="Master Name" matInput placeholder="Master Name">  
+                      </mat-form-field>  
+                      <mat-error>  
+                        <span *ngIf="!employeeForm.get('MasterName').value && employeeForm.get('MasterName').touched"></span>  
+                      </mat-error>  
+                    
+                    <br><br>                                     
+                     
+                      <mat-form-field class="f2" appearance="outline">  
+                        <input class="value" formControlName="Value" matTooltip="Enter Value" matInput placeholder="Value">  
+                      </mat-form-field>  
+                      <mat-error>  
+                        <span *ngIf="!employeeForm.get('Value').value && employeeForm.get('Value').touched"></span>  
+                      </mat-error>  
+                                       
+                      <button class="submit" type="submit" mat-raised-button color="primary"matTooltip="Click Submit Button"[disabled]="!employeeForm.valid">Submit</button>  
+                      <br>     
+                    </form>
+                  </mat-card-content>
+                  </mat-card>    
+                      <button class="save" type="save" mat-raised-button color="primary"matTooltip="Click Save Button" (click)="saveForm()">Save Master</button>                                                                       
+       
+        
+         <table class="table" >  
+              <tr ngclass="btn-primary">  
+                <th class="tbl2">{{MasterName|uppercase}}</th>  
+              </tr>  
+              <tr *ngFor="let employee of allEmployees | async">                
+                <td class="tbl2">{{employee.Value}}</td>   
+                
+                <td class="tbl2">  
+                  <button mat-raised-button color="primary" type="button" class="btn btn-danger"matTooltip="Click Delete Button"(click)="deleteValue(employee.Id)">Delete</button>  
+                </td>  
+              </tr>  
+            </table>  
+       
+        
+  
+   
+    
+      

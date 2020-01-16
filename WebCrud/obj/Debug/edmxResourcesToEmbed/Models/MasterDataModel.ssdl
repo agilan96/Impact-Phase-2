@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MasterDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="MasterLists">
+    <Key>
+      <PropertyRef Name="MasterName" />
+    </Key>
+    <Property Name="MasterName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="JsonObject" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="MasterValues">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MasterName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Deleted" Type="int" />
+  </EntityType>
+  <EntityContainer Name="MasterDataModelStoreContainer">
+    <EntitySet Name="MasterLists" EntityType="Self.MasterLists" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MasterValues" EntityType="Self.MasterValues" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

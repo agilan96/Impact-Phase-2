@@ -1,0 +1,76 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 50%;
+  }
+  
+  td, th {
+    width: 25%;
+  }
+  .mat-elevation-z8,.mat-elevation-z8{
+    width: 50%;
+  }
+  .listtable{
+      position: relative;
+      margin-left: 30%;
+      margin-top:3%;
+  }
+  .mastertable{
+    position: relative;
+    margin-left:10%;
+    margin-top:5%;
+  }
+  .lol{
+      position: relative;
+      margin-left:55%;
+      margin-top: -30%;
+      width:25%;
+      box-shadow: 10px 10px 10px 10px #888888;
+      height:20em;
+  }
+  .field2
+  {
+      position: relative;
+      left: 10em;
+      top:-5em;
+  }
+  .submit{
+      position: relative;
+      left:5em;
+      top:10em;
+
+  }
+  .reset{
+    position: relative;
+    left:15em;
+    top:-3em;
+  }
+  .back{
+    position: relative;
+    left:35em;
+    top:3em;
+  }
+  
+.mat-form-field-label {
+    color: rgba(0,0,0,.6)!important;
+    
+}
+.addform{
+  position: relative;
+  left:50%;
+  width:25%;
+  
+}
+.f2{
+  position: relative;
+    left:-7.5em;
+    top:12em;
+}
+.title{
+  position: relative;
+    left:3.5em;
+    top:1em;
+}

@@ -1,0 +1,44 @@
+
+
+<div>
+ 
+<mat-card class="sigin">
+  <img class ="img1" src="../../../assets/img/avatarimage.png">
+  
+  
+ 
+  <mat-card-title>Login</mat-card-title>
+<mat-card-content>
+  <form class="form1" [formGroup]="employeeForm"(ngSubmit)="OnSubmit(employeeForm.Password)">  
+   
+          <mat-form-field class="f1" appearance="outline">  
+            <input class="Username" [(ngModel)]="Username" formControlName="Username" matTooltip="Enter Username" matInput placeholder="Username" autocomplete= "off">  
+          </mat-form-field>  
+          <mat-error>  
+            <span *ngIf="!employeeForm.get('Username').Password && employeeForm.get('Username').touched"></span>  
+          </mat-error>  
+        <br/>                                
+       
+          <mat-form-field class="f2" appearance="outline">  
+            <input class="Password" formControlName="Password" matTooltip="Enter Password" autocomplete= "off" matInput placeholder="Password" [type]="hide ? 'password' : 'text'">  
+            
+           
+          </mat-form-field>  
+          <mat-error>  
+            <span *ngIf="!employeeForm.get('Password').Password && employeeForm.get('Password').touched"></span>  
+          </mat-error>  
+  
+        <td class="content-center">  
+          <button class="submit" type="submit" mat-raised-button color="primary"matTooltip="Click Submit Button">Submit</button>      
+    
+        </td>  
+     
+     
+      
+       
+      
+  </form>
+</mat-card-content>
+</mat-card>
+</div>
+

@@ -1,0 +1,21 @@
+.home{
+    position: absolute; left:76%;
+}
+.master-list{
+    position: absolute; left:78%;
+} 
+.master{
+    position: absolute; left:81%;
+    text-decoration: none;
+} 
+.demo{
+    position: absolute; left:85%;
+    text-decoration: none;
+} 
+.logout{
+    position: absolute; left:90%;
+} 
+.header{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+

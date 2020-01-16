@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+
+ 
+
+
+<mat-form-field>
+    <mat-label>Countries</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let s of values" [value]="s.Value">
+        {{s.Value}}
+    </mat-option>
+  </mat-select>
+ 
+</mat-form-field>
+          

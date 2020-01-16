@@ -1,0 +1,43 @@
+
+.mat-card{
+    position: absolute;
+    left: 40%;
+    top: 25%;
+    width: 15%;
+    background-color:rgb(250, 242, 242);
+    opacity:0.9
+}
+.submit{
+    position: relative;
+    left:80%;
+}
+.mat-card-title{
+    position: relative;
+    left:33%;    
+}
+.img1{
+    position: relative;
+    width: 100px;
+    left:25%;
+}
+.img2{
+    position: relative;
+    width: 100px;
+    top:1em;
+    left:115%;
+}
+.heading{
+    color: white;
+    position: relative;
+    left:10%;
+    margin-top: 15%;
+ 
+}
+.img3{
+    position: relative;
+    height: 23.5em;
+    width:250px;
+    margin-top: 5%;
+    left:45%;
+    
+}
